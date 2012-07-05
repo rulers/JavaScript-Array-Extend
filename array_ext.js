@@ -41,7 +41,7 @@ if (!Array.lastIndexOf)
 
 if (!Array.prototype.forEach) {
 	Array.prototype.forEach = function(f, obj) {
-		var l = this.length;	// must be fixed during loop... see docs
+		var l = this.length;
 		for (var i = 0; i < l; i++) {
 			f.call(obj, this[i], i, this);
 		}
@@ -55,7 +55,7 @@ if (!Array.forEach)
 
 if (!Array.prototype.filter) {
 	Array.prototype.filter = function(f, obj) {
-		var l = this.length;	// must be fixed during loop... see docs
+		var l = this.length;
 		var res = [];
 		for (var i = 0; i < l; i++) {
 			if (f.call(obj, this[i], i, this)) {
@@ -73,7 +73,7 @@ if (!Array.filter)
 
 if (!Array.prototype.map) {
 	Array.prototype.map = function(f, obj) {
-		var l = this.length;	// must be fixed during loop... see docs
+		var l = this.length;
 		var res = [];
 		for (var i = 0; i < l; i++) {
 			res.push(f.call(obj, this[i], i, this));
@@ -89,7 +89,7 @@ if (!Array.map)
 
 if (!Array.prototype.some) {
 	Array.prototype.some = function(f, obj) {
-		var l = this.length;	// must be fixed during loop... see docs
+		var l = this.length;
 		for (var i = 0; i < l; i++) {
 			if (f.call(obj, this[i], i, this)) {
 				return true;
@@ -105,7 +105,7 @@ if (!Array.some)
 
 if (!Array.prototype.every) {
 	Array.prototype.every = function(f, obj) {
-		var l = this.length;	// must be fixed during loop... see docs
+		var l = this.length;
 		for (var i = 0; i < l; i++) {
 			if (!f.call(obj, this[i], i, this)) {
 				return false;
